@@ -1,0 +1,34 @@
+﻿<Page
+    x:Class="StrategyCashier.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StrategyCashier"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>单价：</TextBlock>
+            <TextBox Name="UnitPrice" />
+            <Button Name="UnitAddBtn" Click="UnitAdd">增加</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>数量：</TextBlock>
+            <TextBox Name="Quantity" />
+            <Button Name="EmptyList">增加</Button>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <RadioButton Content="CashNormal" Tag="CashNormal" GroupName="CashWay" Checked="CashWay_Checked" IsChecked="True" />
+            <RadioButton Content="CashRebate" Tag="CashRebate" GroupName="CashWay" Checked="CashWay_Checked" />
+            <RadioButton Content="CashReturn" Tag="CashReturn" GroupName="CashWay" Checked="CashWay_Checked" />
+        </StackPanel>
+        <ListView Name="ShoppingList">
+
+        </ListView>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>总计</TextBlock>
+            <TextBlock Name="TotalCost">0.00</TextBlock>
+        </StackPanel>
+    </StackPanel>
+</Page>
